@@ -1,18 +1,28 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Java / Maven
+backend/target/
+*.class
+*.log
 
-# Other files and folders
-.settings/
+# H2 runtime database - DO NOT COMMIT
+**/data/
+*.mv.db
+*.trace.db
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Node
+frontend/node_modules/
+frontend/dist/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Playwright
+frontend/test-results/
+frontend/playwright-report/
+
+# Environment / secrets
+.env
+.env.*
+!/.env.example
