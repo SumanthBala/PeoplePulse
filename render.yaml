@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: peoplepulse-backend
+    runtime: java
+    rootDir: backend
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: FRONTEND_URL
+        value: https://employeepls.netlify.app
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash
